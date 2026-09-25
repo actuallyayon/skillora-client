@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
+import SignupPage from './pages/SignupPage';
 
 export default function App() {
   return (
@@ -12,7 +13,8 @@ export default function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<HomePage />} />
-            {/* Catch-all route */}
+            <Route path="/signup" element={<SignupPage />} />
+            {/* Catch-all fallback */}
             <Route path="*" element={<HomePage />} />
           </Routes>
         </main>
