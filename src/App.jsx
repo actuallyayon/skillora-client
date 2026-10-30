@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import ExplorePage from './pages/ExplorePage';
+import AiMatchesPage from './pages/AiMatchesPage';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 
@@ -17,6 +18,8 @@ export default function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/explore" element={<ExplorePage />} />
             <Route path="/features" element={<ExplorePage />} />
+            <Route path="/ai-matches" element={<AiMatchesPage />} />
+            <Route path="/ai-matcher" element={<AiMatchesPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/signup" element={<SignupPage />} />
             {/* Catch-all fallback */}

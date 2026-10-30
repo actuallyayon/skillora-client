@@ -336,7 +336,7 @@ export default function HomePage() {
                     <span>Instant Escrow Guarantee</span>
                   </span>
                   <Link
-                    to="/signup"
+                    to="/ai-matches"
                     className="px-3.5 py-1.5 bg-[#302ae6] hover:bg-[#2520c0] active:scale-95 text-white text-xs font-bold rounded-xl shadow-sm transition"
                   >
                     View AI Synergy Graph

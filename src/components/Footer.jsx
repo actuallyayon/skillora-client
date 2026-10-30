@@ -33,7 +33,7 @@ export default function Footer() {
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900 mb-4">Marketplace</h4>
             <ul className="space-y-2.5 text-sm">
               <li><Link to="/explore" className="hover:text-[#302ae6] transition">Explore Skills</Link></li>
-              <li><a href="/#ai-matcher" className="hover:text-[#302ae6] transition">AI Skill Matcher</a></li>
+              <li><Link to="/ai-matches" className="hover:text-[#302ae6] transition">AI Skill Matcher</Link></li>
               <li><Link to="/explore" className="hover:text-[#302ae6] transition">Top Rated Mentors</Link></li>
               <li><Link to="/explore" className="hover:text-[#302ae6] transition">Skill Categories</Link></li>
             </ul>
