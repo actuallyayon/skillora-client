@@ -220,15 +220,15 @@ export default function HomePage() {
               <span>Get Started — Claim 50 Free Credits</span>
             </Link>
 
-            <a
-              href="#how-it-works"
+            <Link
+              to="/how-it-works"
               className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-[#eef2ff] hover:bg-[#e0e7ff] text-[#302ae6] text-xs sm:text-sm font-bold transition"
             >
               <div className="w-4 h-4 rounded-full bg-[#302ae6] flex items-center justify-center text-white text-[10px]">
                 ▶
               </div>
               <span>See How It Works</span>
-            </a>
+            </Link>
           </div>
 
           {/* Social Proof / Avatars */}
