@@ -51,12 +51,16 @@ export default function Navbar() {
             >
               Explore Skills
             </Link>
-            <a 
-              href="/#ai-matcher" 
-              className="text-xs lg:text-sm font-semibold px-3 py-1.5 text-slate-700 hover:text-[#302ae6] transition-colors"
+            <Link 
+              to="/ai-matches" 
+              className={`text-xs lg:text-sm font-semibold px-4 py-1.5 rounded-xl transition-all ${
+                location.pathname === '/ai-matches' || location.pathname === '/ai-matcher'
+                  ? 'bg-white text-[#302ae6] shadow-xs font-bold'
+                  : 'text-slate-700 hover:text-[#302ae6]'
+              }`}
             >
               AI Matches
-            </a>
+            </Link>
             <a 
               href="/#how-it-works" 
               className="text-xs lg:text-sm font-semibold px-3 py-1.5 text-slate-700 hover:text-[#302ae6] transition-colors"
@@ -190,13 +194,17 @@ export default function Navbar() {
           >
             Explore Skills
           </Link>
-          <a
-            href="#ai-matcher"
+          <Link
+            to="/ai-matches"
             onClick={() => setMobileMenuOpen(false)}
-            className="block px-3 py-2 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-50"
+            className={`block px-3 py-2 rounded-xl text-sm font-semibold transition ${
+              location.pathname === '/ai-matches' || location.pathname === '/ai-matcher'
+                ? 'bg-indigo-50 text-[#302ae6] font-bold'
+                : 'text-slate-700 hover:bg-slate-50'
+            }`}
           >
             AI Matches
-          </a>
+          </Link>
           <a
             href="#how-it-works"
             onClick={() => setMobileMenuOpen(false)}
