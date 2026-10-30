@@ -40,22 +40,26 @@ export default function Navbar() {
 
         {/* Center: Floating Pill Navigation Capsule */}
         {!isAuthPage && (
-          <nav className="hidden md:flex items-center bg-[#f1f4fb] px-4 py-2 rounded-2xl gap-8 shadow-inner border border-slate-200/50">
-            <a 
-              href="#explore" 
-              className="text-xs lg:text-sm font-semibold text-slate-700 hover:text-[#3424d6] transition-colors"
+          <nav className="hidden md:flex items-center bg-[#f1f4fb] px-2 py-1.5 rounded-2xl gap-2 shadow-inner border border-slate-200/50">
+            <Link 
+              to="/explore" 
+              className={`text-xs lg:text-sm font-semibold px-4 py-1.5 rounded-xl transition-all ${
+                location.pathname === '/explore' || location.pathname === '/features'
+                  ? 'bg-white text-[#302ae6] shadow-xs font-bold'
+                  : 'text-slate-700 hover:text-[#302ae6]'
+              }`}
             >
               Explore Skills
-            </a>
+            </Link>
             <a 
-              href="#ai-matcher" 
-              className="text-xs lg:text-sm font-semibold text-slate-700 hover:text-[#3424d6] transition-colors"
+              href="/#ai-matcher" 
+              className="text-xs lg:text-sm font-semibold px-3 py-1.5 text-slate-700 hover:text-[#302ae6] transition-colors"
             >
               AI Matches
             </a>
             <a 
-              href="#how-it-works" 
-              className="text-xs lg:text-sm font-semibold text-slate-700 hover:text-[#3424d6] transition-colors"
+              href="/#how-it-works" 
+              className="text-xs lg:text-sm font-semibold px-3 py-1.5 text-slate-700 hover:text-[#302ae6] transition-colors"
             >
               How it Works
             </a>
@@ -110,14 +114,19 @@ export default function Navbar() {
             <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-amber-500 ring-2 ring-white"></span>
           </button>
 
-          {/* Profile Chevron Dropdown */}
+          {/* Profile User Avatar & Dropdown */}
           <div className="relative">
             <button
               onClick={() => setProfileDropdownOpen(!profileDropdownOpen)}
-              className="p-1.5 text-slate-500 hover:text-slate-800 rounded-lg hover:bg-slate-100 transition flex items-center"
+              className="p-0.5 rounded-full hover:ring-2 hover:ring-indigo-200 transition flex items-center gap-1"
               aria-label="User menu"
             >
-              <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${profileDropdownOpen ? 'rotate-180' : ''}`} />
+              <img
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&auto=format&fit=crop&q=80"
+                alt="Alex Morgan"
+                className="w-7 h-7 sm:w-8 sm:h-8 rounded-full object-cover ring-2 ring-indigo-100"
+              />
+              <ChevronDown className={`w-3.5 h-3.5 text-slate-500 transition-transform duration-200 ${profileDropdownOpen ? 'rotate-180' : ''}`} />
             </button>
 
             {/* Dropdown Menu */}
@@ -170,13 +179,17 @@ export default function Navbar() {
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && !isAuthPage && (
         <div className="md:hidden bg-white border-b border-slate-200 px-4 py-4 space-y-2">
-          <a
-            href="#explore"
+          <Link
+            to="/explore"
             onClick={() => setMobileMenuOpen(false)}
-            className="block px-3 py-2 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-50"
+            className={`block px-3 py-2 rounded-xl text-sm font-semibold transition ${
+              location.pathname === '/explore' || location.pathname === '/features'
+                ? 'bg-indigo-50 text-[#302ae6] font-bold'
+                : 'text-slate-700 hover:bg-slate-50'
+            }`}
           >
             Explore Skills
-          </a>
+          </Link>
           <a
             href="#ai-matcher"
             onClick={() => setMobileMenuOpen(false)}

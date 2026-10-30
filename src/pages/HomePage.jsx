@@ -175,7 +175,7 @@ export default function HomePage() {
             <form 
               onSubmit={(e) => {
                 e.preventDefault();
-                navigate(`/signup?query=${encodeURIComponent(skillNeeded)}`);
+                navigate(`/explore${skillNeeded ? `?search=${encodeURIComponent(skillNeeded)}` : ''}`);
               }}
               className="bg-white p-2 sm:p-2.5 rounded-2xl sm:rounded-3xl shadow-xl shadow-indigo-500/10 border border-slate-200/80 flex flex-col sm:flex-row items-center gap-2"
             >
@@ -449,7 +449,7 @@ export default function HomePage() {
             </p>
           </div>
           <Link
-            to="/signup"
+            to="/explore"
             className="text-sm font-bold text-[#302ae6] hover:underline inline-flex items-center gap-1"
           >
             <span>Explore all 50+ skills</span>
@@ -463,7 +463,7 @@ export default function HomePage() {
             return (
               <div
                 key={cat.id}
-                onClick={() => navigate(`/signup?category=${cat.id}`)}
+                onClick={() => navigate('/explore')}
                 className="bg-white rounded-3xl p-6 border border-slate-100 shadow-sm hover:shadow-xl hover:border-indigo-100 hover:-translate-y-1 transition duration-200 cursor-pointer flex flex-col justify-between"
               >
                 <div>
