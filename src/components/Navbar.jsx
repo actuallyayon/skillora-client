@@ -61,12 +61,16 @@ export default function Navbar() {
             >
               AI Matches
             </Link>
-            <a 
-              href="/#how-it-works" 
-              className="text-xs lg:text-sm font-semibold px-3 py-1.5 text-slate-700 hover:text-[#302ae6] transition-colors"
+            <Link 
+              to="/how-it-works" 
+              className={`text-xs lg:text-sm font-semibold px-4 py-1.5 rounded-xl transition-all ${
+                location.pathname === '/how-it-works' || location.pathname === '/how'
+                  ? 'bg-white text-[#302ae6] shadow-xs font-bold'
+                  : 'text-slate-700 hover:text-[#302ae6]'
+              }`}
             >
               How it Works
-            </a>
+            </Link>
           </nav>
         )}
 
@@ -205,13 +209,17 @@ export default function Navbar() {
           >
             AI Matches
           </Link>
-          <a
-            href="#how-it-works"
+          <Link
+            to="/how-it-works"
             onClick={() => setMobileMenuOpen(false)}
-            className="block px-3 py-2 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-50"
+            className={`block px-3 py-2 rounded-xl text-sm font-semibold transition ${
+              location.pathname === '/how-it-works' || location.pathname === '/how'
+                ? 'bg-indigo-50 text-[#302ae6] font-bold'
+                : 'text-slate-700 hover:bg-slate-50'
+            }`}
           >
             How it Works
-          </a>
+          </Link>
           <div className="pt-2 border-t border-slate-100 flex items-center justify-between">
             <Link
               to="/login"

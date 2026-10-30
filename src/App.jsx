@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import ExplorePage from './pages/ExplorePage';
 import AiMatchesPage from './pages/AiMatchesPage';
+import HowItWorksPage from './pages/HowItWorksPage';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 
@@ -20,6 +21,8 @@ export default function App() {
             <Route path="/features" element={<ExplorePage />} />
             <Route path="/ai-matches" element={<AiMatchesPage />} />
             <Route path="/ai-matcher" element={<AiMatchesPage />} />
+            <Route path="/how-it-works" element={<HowItWorksPage />} />
+            <Route path="/how" element={<HowItWorksPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/signup" element={<SignupPage />} />
             {/* Catch-all fallback */}

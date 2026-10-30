@@ -43,7 +43,7 @@ export default function Footer() {
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-900 mb-4">Platform</h4>
             <ul className="space-y-2.5 text-sm">
-              <li><a href="#how-it-works" className="hover:text-[#302ae6] transition">How it Works</a></li>
+              <li><Link to="/how-it-works" className="hover:text-[#302ae6] transition">How it Works</Link></li>
               <li><span className="text-slate-400">Credit Escrow Model</span></li>
               <li><span className="text-slate-400">Community Honor Code</span></li>
               <li><span className="text-slate-400">AI Compatibility</span></li>
